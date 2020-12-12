@@ -14,7 +14,7 @@
 	<th>
 	  <center>
 	    <img src="./img/bilateral_filter/bilateral_filter_gaussian_filter_out.png" alt="" style="width:14vw;" hspace="5">
-	    <br>Gaussian Denoising
+	    <br>Gaussian Blur
 	  </center>
 	</th>
 	<th>
@@ -26,7 +26,8 @@
       </tr>
     </table>
     <br>
+    <p>This is a <a target="_blank" href="https://en.wikipedia.org/wiki/Bilateral_filter">bilateral filter</a> impementation.</p>
     <p>Image smoothing and denoising is a very important part of almost all computer vision and graphics algorithms. The issue with using basic Gaussian blurs or other linear filters are that they may cause us to lose important structural data in our image (think about smoothing a checkerboard with a basic Gaussian blur, we would lose our strong edges). In order to maintain edges, the bilateral filter assigns weights to it's neighbors based not only on spatial distance but also on intensity distances as well. This is demonstrated in how the grass in the above images are not blurred into the other objects when processed with bilateral filter.</p>
-    <p>Source code: <a href="https://github.com/paul-tqh-nguyen/bilateral_filter">Github</a></p>
+    <p>Source code: <a target="_blank" href="https://github.com/paul-tqh-nguyen/bilateral_filter">Github</a></p>
   </div>
 </div>

@@ -1,26 +1,11 @@
 
-/********/
-/* Menu */
-/********/
-
-$("#menu-close").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
-
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
-
 /*******************/
 /* Mobile Handling */
 /*******************/
 
-var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/)); // @todo user agent matching is not ideal
+const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/)); // TODO user agent matching is not ideal
 if (isMobile) {
     $("#header-row").toggleClass("when-on-mobile");
-    $(".header-text-block-verbose-text").toggleClass("when-on-mobile");
     $("#header-text-block-title-text").toggleClass("when-on-mobile");
 }
 
@@ -92,8 +77,8 @@ const loadFileContentText = fileName => {
     
     const sampleWorkFileNameToSampleWorkLabelsPairs = [
         ['sample_work_descriptions/get_food_nyc_dataset.html', ['All']],
-        ['sample_work_descriptions/autograd.html', ['All', 'Deep Learning']],
         ['sample_work_descriptions/impact_of_attention.html', ['All', 'Deep Learning', 'NLP']],
+        ['sample_work_descriptions/autograd.html', ['All', 'Deep Learning']],
         ['sample_work_descriptions/image_perforation.html', ['All', 'Image Processing']],
         ['sample_work_descriptions/google_reviews_transformers_comparison.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/reuters_topic_labelling.html', ['All', 'Deep Learning', 'NLP']],
@@ -110,7 +95,6 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/netflix_2019_hashing_comparison.html', ['All', 'Graph Analytics', 'Visualization (Interactive)']],
         ['sample_work_descriptions/nyc_collision_map.html', ['All', 'UI/UX', 'Visualization (Interactive)']],
         ['sample_work_descriptions/stock_viewer.html', ['All', 'UI/UX', 'Visualization (Interactive)']],
-        ['sample_work_descriptions/temporal_sales_choropleth_uk_retailer.html', ['All', 'Visualization (Interactive)']],
         ['sample_work_descriptions/swing_dance_scores.html', ['All', 'UI/UX']],
     ];
     const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
